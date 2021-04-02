@@ -13,8 +13,13 @@ GLFWwindow* window;
 #include <glm/glm.hpp>
 using namespace glm;
 
+void error_callback(int error, const char* description) {
+	fprintf(stderr, "Error: %s\n", description);
+}
+
 int main( void )
 {
+	glfwSetErrorCallback(error_callback);
 	// Initialise GLFW
 	if( !glfwInit() )
 	{

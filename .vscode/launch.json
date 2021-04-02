@@ -16,7 +16,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/01_first_window",
             "environment": [{
-                "name":"DISPLAY", "value":":1"
+                "name":"DISPLAY", "value":"${env:DISPLAY}"
             }],
             "externalConsole": false,
             "MIMode": "lldb",

@@ -7,7 +7,7 @@
             "macFrameworkPath": [
                 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/clang++",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64",
@@ -15,9 +15,9 @@
         },
         {
             "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/include/**"
-            ],
+            // "includePath": [
+            //     "${workspaceFolder}/include/**"
+            // ],
             "defines": [],
             "compilerPath": "/usr/bin/clang++",
             "cStandard": "c11",
