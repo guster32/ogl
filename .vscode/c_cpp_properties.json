@@ -15,9 +15,7 @@
         },
         {
             "name": "Linux",
-            // "includePath": [
-            //     "${workspaceFolder}/include/**"
-            // ],
+            "includePath": [],
             "defines": [],
             "compilerPath": "/usr/bin/clang++",
             "cStandard": "c11",

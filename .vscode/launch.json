@@ -5,16 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "01_first_window [Debug]",
+            "name": "Debug Tutorial Program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/debug/01_first_window",
+            "program": "${workspaceFolder}/build/debug/${fileBasenameNoExtension}",
             "args": [
               "localhost",
               "5672"
             ],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/01_first_window",
+            "cwd": "${workspaceFolder}/${fileBasenameNoExtension}",
             "environment": [{
                 "name":"DISPLAY", "value":"${env:DISPLAY}"
             }],

@@ -18,6 +18,8 @@ set(ALL_LIBS
 	GLEW
 )
 
+include_directories(${CMAKE_SOURCE_DIR})
+
 add_definitions(
 	-DTW_STATIC
 	-DTW_NO_LIB_PRAGMA
@@ -33,3 +35,18 @@ add_executable(01_first_window
 target_link_libraries(01_first_window
 	${ALL_LIBS}
 )
+
+# Tutorial 2
+add_executable(02_red_triangle
+	02_red_triangle/02_red_triangle.cpp
+	common/shader.hpp
+	common/shader.cpp
+
+	02_red_triangle/SimpleFragmentShader.glsl
+	02_red_triangle/SimpleVertexShader.glsl
+)
+target_link_libraries(02_red_triangle
+	${ALL_LIBS}
+)
+configure_file(02_red_triangle/SimpleFragmentShader.glsl SimpleFragmentShader.glsl COPYONLY)
+configure_file(02_red_triangle/SimpleVertexShader.glsl SimpleVertexShader.glsl COPYONLY)
