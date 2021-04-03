@@ -42,11 +42,11 @@ add_executable(02_red_triangle
 	common/shader.hpp
 	common/shader.cpp
 
-	02_red_triangle/SimpleFragmentShader.glsl
-	02_red_triangle/SimpleVertexShader.glsl
+	02_red_triangle/SimpleFragmentShader.fs.glsl
+	02_red_triangle/SimpleVertexShader.vs.glsl
 )
 target_link_libraries(02_red_triangle
 	${ALL_LIBS}
 )
-configure_file(02_red_triangle/SimpleFragmentShader.glsl SimpleFragmentShader.glsl COPYONLY)
-configure_file(02_red_triangle/SimpleVertexShader.glsl SimpleVertexShader.glsl COPYONLY)
+configure_file(02_red_triangle/SimpleFragmentShader.fs.glsl SimpleFragmentShader.fs.glsl COPYONLY)
+configure_file(02_red_triangle/SimpleVertexShader.vs.glsl SimpleVertexShader.vs.glsl COPYONLY)
