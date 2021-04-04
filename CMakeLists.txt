@@ -50,3 +50,18 @@ target_link_libraries(02_red_triangle
 )
 configure_file(02_red_triangle/SimpleFragmentShader.fs.glsl SimpleFragmentShader.fs.glsl COPYONLY)
 configure_file(02_red_triangle/SimpleVertexShader.vs.glsl SimpleVertexShader.vs.glsl COPYONLY)
+
+# Tutorial 3
+add_executable(03_matrices
+	03_matrices/03_matrices.cpp
+	common/shader.hpp
+	common/shader.cpp
+
+	03_matrices/SingleColor.fs.glsl
+	03_matrices/SimpleTransform.vs.glsl
+)
+target_link_libraries(03_matrices
+	${ALL_LIBS}
+)
+configure_file(03_matrices/SingleColor.fs.glsl SingleColor.fs.glsl COPYONLY)
+configure_file(03_matrices/SimpleTransform.vs.glsl SimpleTransform.vs.glsl COPYONLY)
