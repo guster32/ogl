@@ -65,3 +65,18 @@ target_link_libraries(03_matrices
 )
 configure_file(03_matrices/SingleColor.fs.glsl SingleColor.fs.glsl COPYONLY)
 configure_file(03_matrices/SimpleTransform.vs.glsl SimpleTransform.vs.glsl COPYONLY)
+
+# Tutorial 4
+add_executable(04_colored_cube
+	04_colored_cube/04_colored_cube.cpp
+	common/shader.hpp
+	common/shader.cpp
+
+	04_colored_cube/ColorFragmentShader.fs.glsl
+	04_colored_cube/TransformVertexShader.vs.glsl
+)
+target_link_libraries(04_colored_cube
+	${ALL_LIBS}
+)
+configure_file(04_colored_cube/ColorFragmentShader.fs.glsl ColorFragmentShader.fs.glsl COPYONLY)
+configure_file(04_colored_cube/TransformVertexShader.vs.glsl TransformVertexShader.vs.glsl COPYONLY)
