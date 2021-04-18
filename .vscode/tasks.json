@@ -18,7 +18,7 @@
         "command": "rm",
         "args": [
           "-rf",
-          "${workspaceFolder}/build/debug/*"
+          "${workspaceFolder}/build/debug/* | true"
         ],
         "options": {
           "cwd": "${workspaceFolder}"
