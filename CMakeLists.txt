@@ -85,3 +85,11 @@ target_link_libraries(04_colored_cube
 )
 configure_file(04_colored_cube/ColorFragmentShader.fs.glsl ColorFragmentShader.fs.glsl COPYONLY)
 configure_file(04_colored_cube/TransformVertexShader.vs.glsl TransformVertexShader.vs.glsl COPYONLY)
+
+# Tutorial 5
+add_executable(05_textured_cube
+	05_textured_cube/05_textured_cube.cpp
+)
+target_link_libraries(05_textured_cube
+	${ALL_LIBS}
+)
