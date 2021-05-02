@@ -66,15 +66,9 @@ int main(void)
     GLuint programID = LoadShaders("SimpleVertexShader.vs.glsl", "SimpleFragmentShader.fs.glsl");
 
     static const GLfloat g_vertex_buffer_data[] = {
-        -1.0f,
-        -1.0f,
-        0.0f,
-        1.0f,
-        -1.0f,
-        0.0f,
-        0.0f,
-        1.0f,
-        0.0f,
+        -1.0f, -1.0f, 0.0f,
+        1.0f, -1.0f, 0.0f,
+        0.0f, 1.0f, 0.0f,
     };
 
     GLuint vertexbuffer;
