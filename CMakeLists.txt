@@ -101,7 +101,7 @@ add_executable(05_textured_cube
 target_link_libraries(05_textured_cube
 	${ALL_LIBS}
 )
-configure_file(05_textured_cube/TextureFragmentShader05.fs.glsl ColorFragmentShader05.fs.glsl COPYONLY)
+configure_file(05_textured_cube/TextureFragmentShader05.fs.glsl TextureFragmentShader05.fs.glsl COPYONLY)
 configure_file(05_textured_cube/TransformVertexShader05.vs.glsl TransformVertexShader05.vs.glsl COPYONLY)
 configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
