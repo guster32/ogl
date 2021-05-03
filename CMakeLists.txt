@@ -95,14 +95,14 @@ add_executable(05_textured_cube
 	common/texture.hpp
 	common/texture.cpp
 
-	05_textured_cube/TextureFragmentShader.fs.glsl
-	05_textured_cube/TransformVertexShader.vs.glsl
+	05_textured_cube/TextureFragmentShader05.fs.glsl
+	05_textured_cube/TransformVertexShader05.vs.glsl
 )
 target_link_libraries(05_textured_cube
 	${ALL_LIBS}
 )
-configure_file(05_textured_cube/TextureFragmentShader.fs.glsl ColorFragmentShader.fs.glsl COPYONLY)
-configure_file(05_textured_cube/TransformVertexShader.vs.glsl TransformVertexShader.vs.glsl COPYONLY)
+configure_file(05_textured_cube/TextureFragmentShader05.fs.glsl ColorFragmentShader.fs.glsl COPYONLY)
+configure_file(05_textured_cube/TransformVertexShader05.vs.glsl TransformVertexShader.vs.glsl COPYONLY)
 configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.tga uvtemplate.tga COPYONLY) 
