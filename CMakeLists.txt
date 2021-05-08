@@ -105,4 +105,26 @@ configure_file(05_textured_cube/TextureFragmentShader05.fs.glsl TextureFragmentS
 configure_file(05_textured_cube/TransformVertexShader05.vs.glsl TransformVertexShader05.vs.glsl COPYONLY)
 configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
-configure_file(05_textured_cube/uvtemplate.tga uvtemplate.tga COPYONLY) 
+configure_file(05_textured_cube/uvtemplate.tga uvtemplate.tga COPYONLY)
+
+# Tutorial 6
+add_executable(06_keyboard_and_mouse
+	06_keyboard_and_mouse/06_keyboard_and_mouse.cpp
+	common/shader.hpp
+	common/shader.cpp
+	common/texture.hpp
+	common/texture.cpp
+	common/controls.hpp
+	common/controls.cpp
+
+	06_keyboard_and_mouse/TextureFragmentShader06.fs.glsl
+	06_keyboard_and_mouse/TransformVertexShader06.vs.glsl
+)
+target_link_libraries(06_keyboard_and_mouse
+	${ALL_LIBS}
+)
+configure_file(06_keyboard_and_mouse/TextureFragmentShader06.fs.glsl TextureFragmentShader06.fs.glsl COPYONLY)
+configure_file(06_keyboard_and_mouse/TransformVertexShader06.vs.glsl TransformVertexShader06.vs.glsl COPYONLY)
+configure_file(06_keyboard_and_mouse/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
+configure_file(06_keyboard_and_mouse/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
+configure_file(06_keyboard_and_mouse/uvtemplate.tga uvtemplate.tga COPYONLY) 
