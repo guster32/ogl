@@ -17,6 +17,7 @@
 * Install the following dependencies:
     * Install clang 9 or later (https://justiceboi.github.io/blog/install-clang-9-on-ubuntu/)
     * ```sudo apt install cmake g++ ninja-build glfw3 glew glm```
+    * For ubunt 21+ ```sudo apt install cmake g++ ninja-build libglfw3-dev libglew-dev libglm-dev```
 * Build:
     * ```mkdir -p build/default```
     * ```cd mkdir -p build/default```
