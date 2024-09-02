@@ -28,7 +28,7 @@ int main(void)
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 
     // Create an SDL window
-    SDL_Window* window = SDL_CreateWindow("Tutorial 01", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 768, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+    SDL_Window* window = SDL_CreateWindow("Tutorial 01", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 0, 0, SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN_DESKTOP);
     if (!window) {
         fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
         SDL_Quit();
