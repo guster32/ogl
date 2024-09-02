@@ -13,6 +13,7 @@ endif()
 project(OpenGLTutorial)
 
 find_package(PkgConfig)
+pkg_check_modules(EGL REQUIRED egl)
 find_package(PkgConfig REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
@@ -25,9 +26,11 @@ set(ALL_LIBS
 	glfw
 	GLEW
 	SDL2
+	${EGL_LIBRARIES}
 )
 
 include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${EGL_INCLUDE_DIRS})
 
 add_definitions(
 	-DTW_STATIC
@@ -36,6 +39,16 @@ add_definitions(
 	-DGLEW_STATIC
 	-D_CRT_SECURE_NO_WARNINGS
 )
+
+# eglConfigs 00
+add_executable(eglConfigs
+	eglConfigs/eglConfigs.cpp
+)
+target_link_libraries(eglConfigs
+	${ALL_LIBS}
+)
+install(TARGETS eglConfigs RUNTIME DESTINATION bin)
+
 
 # Tutorial 00
 add_executable(00_sdl2
