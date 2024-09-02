@@ -8,6 +8,7 @@
             "name": "Debug Tutorial Program",
             "type": "cppdbg",
             "request": "launch",
+            "miDebuggerPath": "/usr/bin/lldb-mi",
             "program": "${workspaceFolder}/build/debug/${fileBasenameNoExtension}",
             "args": [
               "localhost",

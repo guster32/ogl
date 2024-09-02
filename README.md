@@ -23,7 +23,13 @@
     * ```cd mkdir -p build/default```
     * ```cmake -GNinja ../..```
     * ```ninja```
-Notes on VSCODE setup issues with lldb:
+
+# Notes on VSCODE setup issues with lldb:
+
+`sudo dnf install llvm-devel lldb-devel`
+
+https://github.com/lldb-tools/lldb-mi.git
+
 https://github.com/microsoft/vscode-cpptools/issues/5415
 
 
