@@ -18,11 +18,13 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
+find_package(SDL2 REQUIRED)
 
 set(ALL_LIBS
 	${OPENGL_LIBRARY}
 	glfw
 	GLEW
+	SDL2
 )
 
 include_directories(${CMAKE_SOURCE_DIR})
@@ -34,6 +36,15 @@ add_definitions(
 	-DGLEW_STATIC
 	-D_CRT_SECURE_NO_WARNINGS
 )
+
+# Tutorial 00
+add_executable(00_sdl2
+	00_sdl2/00_sdl2.cpp
+)
+target_link_libraries(00_sdl2
+	${ALL_LIBS}
+)
+install(TARGETS 00_sdl2 RUNTIME DESTINATION bin)
 
 # Tutorial 1
 add_executable(01_first_window 
