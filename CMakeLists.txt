@@ -42,6 +42,7 @@ add_executable(01_first_window
 target_link_libraries(01_first_window
 	${ALL_LIBS}
 )
+install(TARGETS 01_first_window RUNTIME DESTINATION bin)
 
 # Tutorial 2
 add_executable(02_red_triangle
@@ -57,6 +58,8 @@ target_link_libraries(02_red_triangle
 )
 configure_file(02_red_triangle/SimpleFragmentShader.fs.glsl SimpleFragmentShader.fs.glsl COPYONLY)
 configure_file(02_red_triangle/SimpleVertexShader.vs.glsl SimpleVertexShader.vs.glsl COPYONLY)
+install(TARGETS 02_red_triangle RUNTIME DESTINATION bin)
+
 
 # Tutorial 3
 add_executable(03_matrices
@@ -72,6 +75,7 @@ target_link_libraries(03_matrices
 )
 configure_file(03_matrices/SingleColor.fs.glsl SingleColor.fs.glsl COPYONLY)
 configure_file(03_matrices/SimpleTransform.vs.glsl SimpleTransform.vs.glsl COPYONLY)
+install(TARGETS 03_matrices RUNTIME DESTINATION bin)
 
 # Tutorial 4
 add_executable(04_colored_cube
@@ -87,6 +91,7 @@ target_link_libraries(04_colored_cube
 )
 configure_file(04_colored_cube/ColorFragmentShader.fs.glsl ColorFragmentShader.fs.glsl COPYONLY)
 configure_file(04_colored_cube/TransformVertexShader.vs.glsl TransformVertexShader.vs.glsl COPYONLY)
+install(TARGETS 04_colored_cube RUNTIME DESTINATION bin)
 
 # Tutorial 5
 add_executable(05_textured_cube
@@ -107,6 +112,7 @@ configure_file(05_textured_cube/TransformVertexShader05.vs.glsl TransformVertexS
 configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
 configure_file(05_textured_cube/uvtemplate.tga uvtemplate.tga COPYONLY)
+install(TARGETS 05_textured_cube RUNTIME DESTINATION bin)
 
 # Tutorial 6
 add_executable(06_keyboard_and_mouse
@@ -129,3 +135,4 @@ configure_file(06_keyboard_and_mouse/TransformVertexShader06.vs.glsl TransformVe
 configure_file(06_keyboard_and_mouse/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
 configure_file(06_keyboard_and_mouse/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
 configure_file(06_keyboard_and_mouse/uvtemplate.tga uvtemplate.tga COPYONLY) 
+install(TARGETS 06_keyboard_and_mouse RUNTIME DESTINATION bin)
