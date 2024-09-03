@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define GLEW_EGL
 // Include GLEW
 #include <GL/glew.h>
 
@@ -12,6 +13,7 @@
 #include <glm/glm.hpp>
 using namespace glm;
 
+//tinywl  -s "SDL_VIDEODRIVER=wayland 00_sdl2"
 int main(void)
 {
     // Initialize SDL
