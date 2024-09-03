@@ -6,7 +6,7 @@
 // Include GLEW
 // #include <GL/glew.h>
 #include <EGL/egl.h>
-#include <GLES2/gl2.h>
+#include <GLES3/gl3.h>
 // Include SDL2
 #include <SDL2/SDL.h>
 
