@@ -75,7 +75,7 @@ int main(void)
     }
 
     // Dark blue background
-    glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+    glClearColor(0.7f, 0.2f, 0.4f, 0.0f);
 
     bool running = true;
     SDL_Event event;
