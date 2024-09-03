@@ -22,9 +22,6 @@ void print_desired_sdl_opengl_config() {
     SDL_GL_GetAttribute(SDL_GL_STENCIL_SIZE, &value);
     printf("Desired Stencil Size: %d\n", value);
 
-    SDL_GL_GetAttribute(SDL_GL_DOUBLEBUFFER, &value);
-    printf("Desired Double Buffer: %d\n", value);
-
     SDL_GL_GetAttribute(SDL_GL_MULTISAMPLEBUFFERS, &value);
     printf("Desired Sample Buffers: %d\n", value);
 
