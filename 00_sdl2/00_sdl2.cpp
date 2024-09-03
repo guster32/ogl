@@ -46,6 +46,15 @@ int main(void)
         return -1;
     }
 
+    // Make the context current
+    if (SDL_GL_MakeCurrent(window, glContext) != 0) {
+        fprintf(stderr, "Failed to make the OpenGL context current: %s\n", SDL_GetError());
+        SDL_GL_DeleteContext(glContext);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return -1;
+    }
+
     // Initialize GLEW
     GLenum err = glewInit();
     if (err != GLEW_OK) {
