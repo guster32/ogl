@@ -4,8 +4,9 @@
 
 #define GLEW_EGL
 // Include GLEW
-#include <GL/glew.h>
-
+// #include <GL/glew.h>
+#include <EGL/egl.h>
+#include <GLES2/gl2.h>
 // Include SDL2
 #include <SDL2/SDL.h>
 
@@ -58,15 +59,15 @@ int main(void)
         return -1;
     }
 
-    // Initialize GLEW
-    GLenum err = glewInit();
-    if (err != GLEW_OK) {
-        fprintf(stderr, "Failed to initialize GLEW: %s\n", glewGetErrorString(err));
-        SDL_GL_DeleteContext(glContext);
-        SDL_DestroyWindow(window);
-        SDL_Quit();
-        return -1;
-    }
+    // // Initialize GLEW
+    // GLenum err = glewInit();
+    // if (err != GLEW_OK) {
+    //     fprintf(stderr, "Failed to initialize GLEW: %s\n", glewGetErrorString(err));
+    //     SDL_GL_DeleteContext(glContext);
+    //     SDL_DestroyWindow(window);
+    //     SDL_Quit();
+    //     return -1;
+    // }
 
     // Enable V-Sync
     if (SDL_GL_SetSwapInterval(1) < 0) {

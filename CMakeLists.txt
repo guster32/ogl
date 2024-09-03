@@ -14,6 +14,7 @@ project(OpenGLTutorial)
 
 find_package(PkgConfig)
 pkg_check_modules(EGL REQUIRED egl)
+pkg_check_modules(GLESv2 REQUIRED glesv2)  # For OpenGL ES 2.0/3.0
 find_package(PkgConfig REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
@@ -22,15 +23,20 @@ find_package(glm REQUIRED)
 find_package(SDL2 REQUIRED)
 
 set(ALL_LIBS
+	${GLESv2_LIBRARIES}   # Link against OpenGL ES
+	${EGL_LIBRARIES}      # Link against EGL
 	${OPENGL_LIBRARY}
 	glfw
 	GLEW
 	SDL2
-	${EGL_LIBRARIES}
 )
 
-include_directories(${CMAKE_SOURCE_DIR})
-include_directories(${EGL_INCLUDE_DIRS})
+include_directories(
+	${GLESv2_INCLUDE_DIRS}
+	${CMAKE_SOURCE_DIR}
+	${SDL2_INCLUDE_DIRS}
+	${EGL_INCLUDE_DIRS}
+)
 
 add_definitions(
 	-DTW_STATIC
