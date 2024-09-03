@@ -40,7 +40,7 @@ add_definitions(
 	-D_CRT_SECURE_NO_WARNINGS
 )
 
-# eglConfigs 00
+# eglConfigs
 add_executable(eglConfigs
 	eglConfigs/eglConfigs.cpp
 )
@@ -48,6 +48,15 @@ target_link_libraries(eglConfigs
 	${ALL_LIBS}
 )
 install(TARGETS eglConfigs RUNTIME DESTINATION bin)
+
+# sdlConfig
+add_executable(sdlConfig
+	sdlConfig/sdlConfig.cpp
+)
+target_link_libraries(sdlConfig
+	${ALL_LIBS}
+)
+install(TARGETS sdlConfig RUNTIME DESTINATION bin)
 
 
 # Tutorial 00
