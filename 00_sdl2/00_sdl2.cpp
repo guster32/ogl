@@ -45,8 +45,9 @@ int main(void)
     }
 
     // Initialize GLEW
-    if (glewInit() != GLEW_OK) {
-        fprintf(stderr, "Failed to initialize GLEW\n");
+    GLenum err = glewInit();
+    if (err != GLEW_OK) {
+        fprintf(stderr, "Failed to initialize GLEW: %s\n", glewGetErrorString(err));
         SDL_GL_DeleteContext(glContext);
         SDL_DestroyWindow(window);
         SDL_Quit();
