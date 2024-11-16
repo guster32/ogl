@@ -74,8 +74,16 @@ target_link_libraries(00_sdl2
 )
 install(TARGETS 00_sdl2 RUNTIME DESTINATION bin)
 
+add_executable(00_VectorWar
+	00_VectorWar/00_VectorWar.cpp
+)
+target_link_libraries(00_VectorWar
+	${ALL_LIBS}
+)
+install(TARGETS 00_VectorWar RUNTIME DESTINATION bin)
+
 # Tutorial 1
-add_executable(01_first_window 
+add_executable(01_first_window
 	01_first_window/01_first_window.cpp
 )
 target_link_libraries(01_first_window
@@ -148,8 +156,8 @@ target_link_libraries(05_textured_cube
 )
 configure_file(05_textured_cube/TextureFragmentShader05.fs.glsl TextureFragmentShader05.fs.glsl COPYONLY)
 configure_file(05_textured_cube/TransformVertexShader05.vs.glsl TransformVertexShader05.vs.glsl COPYONLY)
-configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
-configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
+configure_file(05_textured_cube/uvtemplate.DDS uvtemplate.DDS COPYONLY)
+configure_file(05_textured_cube/uvtemplate.bmp uvtemplate.bmp COPYONLY)
 configure_file(05_textured_cube/uvtemplate.tga uvtemplate.tga COPYONLY)
 install(TARGETS 05_textured_cube RUNTIME DESTINATION bin)
 
@@ -171,7 +179,7 @@ target_link_libraries(06_keyboard_and_mouse
 )
 configure_file(06_keyboard_and_mouse/TextureFragmentShader06.fs.glsl TextureFragmentShader06.fs.glsl COPYONLY)
 configure_file(06_keyboard_and_mouse/TransformVertexShader06.vs.glsl TransformVertexShader06.vs.glsl COPYONLY)
-configure_file(06_keyboard_and_mouse/uvtemplate.DDS uvtemplate.DDS COPYONLY) 
-configure_file(06_keyboard_and_mouse/uvtemplate.bmp uvtemplate.bmp COPYONLY) 
-configure_file(06_keyboard_and_mouse/uvtemplate.tga uvtemplate.tga COPYONLY) 
+configure_file(06_keyboard_and_mouse/uvtemplate.DDS uvtemplate.DDS COPYONLY)
+configure_file(06_keyboard_and_mouse/uvtemplate.bmp uvtemplate.bmp COPYONLY)
+configure_file(06_keyboard_and_mouse/uvtemplate.tga uvtemplate.tga COPYONLY)
 install(TARGETS 06_keyboard_and_mouse RUNTIME DESTINATION bin)
