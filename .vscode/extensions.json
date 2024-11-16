@@ -1,6 +1,6 @@
 {
     "recommendations": [
-        "mrjjot.vscode-glsl-linter",
+        "dtoplak.vscode-glsllint",
         "xaver.clang-format",
         "slevesque.shader",
     ]
