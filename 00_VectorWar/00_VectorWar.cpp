@@ -50,6 +50,38 @@ SDL_Window* CreateMainWindow(const char *title, int width, int height) {
     return window;
 }
 
+void RunMainLoop(SDL_Window *window) {
+    bool running = true;
+    SDL_Event event;
+
+    Uint32 next_frame = SDL_GetTicks();
+    const Uint32 frame_delay = 1000 / 60; // Target 60 FPS
+
+    while (running) {
+        // Poll events
+        while (SDL_PollEvent(&event)) {
+            HandleEvent(&event, running);
+        }
+
+        // Run game logic and render
+        //VectorWar_Idle(0);
+        Uint32 now = SDL_GetTicks();
+        if (now >= next_frame) {
+            //VectorWar_RunFrame(window);
+            next_frame = now + frame_delay;
+        }
+
+        // Delay to maintain frame rate
+        SDL_Delay(frame_delay / 2);
+
+        // Clear the screen
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Swap buffers
+        SDL_GL_SwapWindow(window);
+    }
+}
+
 
 //tinywl  -s "SDL_VIDEODRIVER=wayland 00_sdl2"
 int main(void)
@@ -114,25 +146,8 @@ int main(void)
     // Dark blue background
     glClearColor(0.7f, 0.2f, 0.4f, 0.0f);
 
-    bool running = true;
-    SDL_Event event;
-
-    while (running) {
-        // Handle events
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                running = false;
-            } else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE) {
-                running = false;
-            }
-        }
-
-        // Clear the screen
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Swap buffers
-        SDL_GL_SwapWindow(window);
-    }
+    // Run the main loop
+    RunMainLoop(window);
 
     // Cleanup
     SDL_GL_DeleteContext(glContext);
